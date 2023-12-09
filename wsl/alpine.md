@@ -177,6 +177,10 @@ doas apk add fuse-overlayfs
 Set a large enough sub-space of ids (> 65536)
 
 ```sh
+doas touch /etc/subuid /etc/subgid
+```
+
+```sh
 doas usermod --add-subuids 100000-200000 --add-subgids 100000-200000 $(id -un)
 ```
 
