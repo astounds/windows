@@ -62,6 +62,15 @@ curl -L https://raw.githubusercontent.com/qis/windows/master/wsl/wsl.sh -o /etc/
 chmod 0755 /etc/profile.d/ash.sh /etc/profile.d/wsl.sh
 ```
 
+Network system.
+
+```sh
+tee /etc/network/interface >/dev/null <<'EOF'
+auto lo
+iface lo inet loopback
+EOF
+```
+
 Configure [doas]
 
 Create `/etc/doas.conf`.
